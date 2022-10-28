@@ -1,0 +1,95 @@
+.CardFilm {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+    max-width: 200px;
+    width: 200px;
+    cursor: pointer;
+}
+
+
+.blockInfo {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 115px;
+}
+
+.filmImage {
+    width: 70px;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.title {
+    color: white;
+    font-weight: 600;
+}
+
+.genre {
+    opacity: 0.5;
+    font-size: 13px;
+}
+
+.cardRating {
+    width: 20px;
+}
+
+.blockRating {
+    display: flex;
+    align-items: center;
+    width: 35px;
+    justify-content: space-between;
+}
+
+.cardHeader {
+    margin-bottom: 13px;
+}
+
+.cardHeader div {
+    margin-bottom: 5px;
+}
+
+.cardFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 110px;
+}
+
+.heart {
+    width: 30px;
+    cursor: pointer;
+}
+
+.heart:hover {
+    opacity: 0.6;
+}
+
+.filmScore {
+    font-size: 14px;
+    font-weight: 600;
+    width: 10px;
+}
+
+@media (max-width: 975px) {
+    .CardFilm {
+        flex-direction: column;
+        width: 100%;
+    }
+    .cardFooter {
+        width: 80px;
+    }
+    
+    
+}
+@media (max-width: 435px) {
+    .CardFilm {
+        flex-direction: column;
+        width: 100%;
+    }
+    .cardFooter {
+        width: 80px;
+    }
+    
+}

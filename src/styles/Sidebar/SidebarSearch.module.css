@@ -1,0 +1,212 @@
+.SidebarSearch {
+    max-width: 290px;
+    width: 23%;
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    padding: 30px 0px;
+    height: 100%;
+    color: white;
+}
+
+.headerSearch {
+    width: 75%;
+    position: relative;
+}
+
+.headerSearch input {
+    padding: 10px 0px 10px 10px;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background: #101213;
+    box-sizing: border-box;
+    color: white;
+    font-size: 16px;
+    width: 100%;
+}
+
+.recommendFilms {
+    min-width: 70%;
+    margin-top: 40px;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 600;
+
+}
+
+.someFilms {
+    max-height: 390px;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.favoritesFilms {
+    max-height: 370px;
+    overflow-y: hidden;
+    margin-top: 35px;
+}
+
+.favoritesFilmsList {
+    margin-top: 50px;
+    width: 80%;
+}
+
+
+.allMovies {
+    margin-top: 20px;
+    max-width: 220px;
+    width: 100%;
+    border: none;
+    border-radius: 9px;
+    padding: 13px 10px;
+    color: white;
+    background-color: red;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.allFavorites {
+    margin-top: 20px;
+    width: 100%;
+    border: none;
+    border-radius: 9px;
+    padding: 13px 10px;
+    background-color: red;
+    cursor: pointer;
+    transition: 0.2s;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.FavoritesEmpty {
+    color: white;
+}
+
+.foundFilm {
+    max-height: 220px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    position: absolute;
+    z-index: 2;
+    background-color: #101213;
+    width: 98%;
+}
+
+.filmToWatch a {
+    color: white;
+    text-decoration: none;
+}
+
+.film {
+    height: 80px;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+.film:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: 0.3s;
+}
+
+.filmTitle {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.genres {
+    font-size: 12px;
+    opacity: 0.7;
+    margin-top: 5px;
+}
+
+.filmDescription {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 115px;
+    height: 50px;
+}
+
+.foundFilmImage {
+    width: 50px;
+}
+
+.blockAuth {
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 180px;
+    height: 70px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.blockAuth span a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.BlockFavorites {
+    max-width: 100%;
+}
+
+.FavoritesTitle {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.allMovies:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+}
+.allFavorites:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+@media (max-width: 975px) {
+    .someFilms {
+        margin: 0 auto;
+        width: 55%;
+        max-height: 450px;
+    }
+    .SidebarSearch {
+        width: 23%;
+    }
+    .BlockFavorites {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .favoritesFilmsList {
+    }
+   
+}
+@media (max-width: 719px) {
+    .SidebarSearch {
+        width: 27%;
+    }
+}
+@media (max-width: 652px) {
+    .SidebarSearch {
+       display: none;
+    }
+}

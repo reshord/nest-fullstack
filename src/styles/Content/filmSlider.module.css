@@ -1,0 +1,42 @@
+.FilmsSlider:first-child {
+    width: 100%;
+}
+
+.headerTitle {
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.filmSliderWrapper {
+    cursor: grab;
+    margin: 40px 0px;
+    overflow-x: hidden;
+}
+
+.linkToFilm {
+    list-style: none;
+}
+
+.blockFilterMenu {
+    width: 1000px;
+}
+
+.blockFilms {
+    display: flex;
+}
+
+.CardFilmBlock {
+    margin-right: 22px;
+    margin-bottom: 20px;
+}
+
+
+.blockFilms {
+}
+
+.CardFilmImage {
+    border-radius: 15px;
+    pointer-events: none;
+    height: 250px;
+}

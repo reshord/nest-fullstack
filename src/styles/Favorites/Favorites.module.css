@@ -1,0 +1,169 @@
+.favorites {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.FavoritesContent {
+    padding: 60px 30px;
+    min-width: 55%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.toMainPage {
+    display: none;
+}
+
+.FavoritesFilms {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.ratingBlock {
+    display: flex;
+    align-items: center;
+}
+
+.ratingImg {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.rating {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.FavoritesTitle {
+    font-weight: 600;
+    font-size: 20px;
+    opacity: 0.7;
+}
+
+.blockFilms {
+    margin-bottom: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.FilmImFavorites {
+    margin: 15px 0px 0px 0px;
+    width: 240px;
+    height: 155px;
+    border-radius: 10px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+
+.heart {
+    position: absolute;
+    top: 15px;
+    left: 5px;
+}
+
+.heart:hover {
+    opacity: 0.7;
+}
+
+.titleFilm {
+    font-weight: 650;
+    font-size: 20px;
+}
+
+.CardFilm {
+    display: flex;
+    justify-content: space-between;
+    max-width: 238px;
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-x: hidden;
+    cursor: pointer;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.blockTwo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 120px;
+}
+
+.genres {
+    font-size: 13px;
+    opacity: 0.7;
+    width: 120px;
+}
+
+.FavoritesInfo {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+}
+
+.CardFilmImage {
+    width: 75px;
+    border-radius: 10px;
+}
+
+.FavoritesContent a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+@media (max-width: 975px) {
+    .CardFilm {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+    .blockTwo {
+        align-items: center;
+    }
+    .genres {
+    }
+}
+
+@media (max-width: 653px) {
+    .toMainPage {
+        display: block;
+    }
+    .FavoritesContent {
+
+    }
+}
+
+@media (max-width: 435px) {
+    .CardFilm {
+        flex-direction: column;
+        width: 90px;
+    }
+    .blockTwo {
+        text-align: center;
+        word-break: break-all;
+    }
+    .ratingBlock {
+        width: 80px;
+    }
+    .linkToWatch {
+        width: 80px;
+    } 
+}

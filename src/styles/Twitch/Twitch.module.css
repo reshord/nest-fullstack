@@ -1,0 +1,23 @@
+.twitch {
+    display: flex;
+    justify-content: space-between;
+}
+
+.TwitchContent{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 450px;
+    justify-content: space-between;
+    margin-top: 60px;
+} 
+
+.twitchSearch {
+    background: #101213;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    height: 40px;
+    width: 200px;
+    padding-left: 20px;
+    border-radius: 10px;
+    color: white;
+}

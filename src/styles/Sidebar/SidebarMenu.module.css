@@ -1,0 +1,92 @@
+.SidebarMenu {
+    padding-top: 20px;
+    max-width: 270px;
+    width: 22%;
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+    height: 600px;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 10px;
+    color: white;
+}
+
+.headerTitle {
+    text-align: center;
+}
+
+.headerTitle a {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.menu {
+    margin: 0 auto;
+    width: 73%;
+}
+
+.menu span {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.menu a {
+    opacity: 0.5;
+    transition: 0.2s;
+    color: white;
+    text-decoration: none;
+}
+
+.menu div:hover {
+    opacity: 1;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+    border-right: 5px solid red;
+}
+
+.menu div {
+    margin-bottom: 17px;
+}
+
+
+.popularGenres {
+    margin: 0 auto;
+    width: 73%;
+}
+
+.popularGenres span {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.popularGenres div {
+    margin-bottom: 17px;
+}
+.popularGenres div:hover {
+    border-right: 5px solid red;
+    transition: 0.1s;
+    opacity: 1;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.popularGenres a {
+    opacity: 0.5;
+    width: 100%;
+    transition: 0.2s;
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 652px) {
+    .SidebarMenu{
+        display: none;
+    }
+}
