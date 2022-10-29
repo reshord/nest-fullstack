@@ -27,6 +27,11 @@
 .menu {
     margin: 0 auto;
     width: 73%;
+    
+}
+
+.menu ul {
+    margin-top: 18px;
 }
 
 .menu span {
@@ -41,7 +46,7 @@
     text-decoration: none;
 }
 
-.menu div:hover {
+.default:hover {
     opacity: 1;
     color: white;
     cursor: pointer;
@@ -54,10 +59,19 @@
     margin-bottom: 17px;
 }
 
+.menuActive {
+    border-right: 5px solid red;
+
+}
+
 
 .popularGenres {
     margin: 0 auto;
     width: 73%;
+}
+
+.popularGenres ul {
+    margin-top: 15px;
 }
 
 .popularGenres span {

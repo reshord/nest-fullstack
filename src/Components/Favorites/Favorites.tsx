@@ -25,7 +25,6 @@ const Favorites = () => {
         <div className={styles.favorites} style={{color: 'white'}}>
             <SidebarMenu />
             <div className={styles.FavoritesContent}>
-                <Link className={styles.toMainPage} to={'/'}>to main page</Link>
                 <span className={styles.FavoritesTitle}>Favorites</span>
                 <div className={styles.FavoritesFilms}>
                     {films.favoriteFilms.map(el => (

@@ -6,22 +6,26 @@ import { addCurrentFilm } from "../../rtk/slices/films";
 import { IFavoritesFilms } from "../../Types/types";
 import SidebarMenu from "../sidebars/SidebarMenu/SidebarMenu";
 import { Link } from "react-router-dom";
+import { deleteSpaces } from "../../logic/DeleteSpaces";
 
 const MenuFilms = () => {
     const {films, auth} = useAppSelector<RootState>(store.getState)
 
+    const categories = ['Home', 'Discovery', 'Fresh movies', 'Popular now', 'Twitch']
+
+    const categoriesWithoutSpace = categories.map(el => deleteSpaces(el))
 
 
      return (
         <main className={styles.menuAllFilms}>
             <header className={styles.menuTitle}>Menu</header>
             <div className={styles.blockMenu}>
-                <ul>
-                    <li>Home</li>
-                    <li>Discovery</li>
-                    <li>Fresh movies</li>
-                    <li>Popular now</li>
-                    <li>Twitch</li>
+                <ul className={styles.linksList}>
+                    {categoriesWithoutSpace.map(el => 
+                        <Link to={`/${el.toLowerCase()}`}>
+                            <li>{el}</li>
+                        </Link>
+                    )}
                 </ul>
             </div>
             <div className={styles.blockAuth}>

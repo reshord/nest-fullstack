@@ -1,21 +1,13 @@
 import styles from '../../../styles/Sidebar/SidebarMenu.module.css'
 import { Link } from 'react-router-dom'
+import { deleteSpaces } from '../../../logic/DeleteSpaces'
+import { useState } from 'react'
 
 
 const SidebarMenu = () => {
 
-    const categories = ['Home', 'Discovery', 'Fresh movies', 'Popular now', 'Twitch']
-    
-    const deleteSpaces = (el: string) => {
-        const arr = el.split(' ')
-
-        if(arr.length > 1) {
-            for(let i = 0; i < arr.length; i++) {
-                return arr[i] = `${arr[i]}-${arr[i + 1]}` 
-            }
-        }
-        return arr.join('')
-    }
+    const categories = ['Discovery', 'Fresh movies', 'Popular now', 'Twitch']
+    const [active, setActive] = useState<string>('')
 
     const categoriesWithoutSpace = categories.map(el => deleteSpaces(el))
  
@@ -30,7 +22,7 @@ const SidebarMenu = () => {
                 <span>MENU</span>
                 <ul>
                     {categoriesWithoutSpace.map(el => (
-                        <div>
+                        <div onClick={() => setActive(el)} className={el === active ? styles.menuActive : styles.default}>
                             <Link to={`/${el.toLowerCase()}`}>{el}</Link>
                         </div>
                     ))}

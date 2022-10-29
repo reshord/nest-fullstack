@@ -29,6 +29,7 @@
 .CardFilmBlock {
     margin-right: 22px;
     margin-bottom: 20px;
+    position: relative;
 }
 
 
@@ -39,4 +40,16 @@
     border-radius: 15px;
     pointer-events: none;
     height: 250px;
+}
+
+
+.addToFavorites {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.addToFavorites:hover {
+    opacity: 0.5;
+    cursor: pointer;
 }

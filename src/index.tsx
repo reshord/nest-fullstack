@@ -31,10 +31,12 @@ root.render(
               <Route path='/twitch' element={<Twitch />}/>
               <Route path='/menu' element={<MenuFilms />}/>
               <Route path='/popular-now' element={<PopularNow />}/>
+              
             </Routes>
           </Provider>
           <div className="navbarFooterBlock">
             <NavbarFooter />
+
           </div>
       </BrowserRouter>
   </React.StrictMode>

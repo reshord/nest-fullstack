@@ -4,8 +4,10 @@ import { useAppDispatch, useAppSelector } from '../../../rtk/hooks'
 import { addCurrentFilm } from '../../../rtk/slices/films'
 import store, { RootState } from '../../../rtk/store'
 import styles from '../../../styles/Content/filmSlider.module.css'
-import { IFavoritesFilms } from '../../../Types/types'
+import { IFavorite, IFavoritesFilms } from '../../../Types/types'
 import SignUpPlease from '../../Modals/SignUpPlease'
+import heart from '../../../images/CardFilm/iconHeart.png'
+import {addToFavorites} from '../../../rtk/slices/films'
 
 interface IProps {
     image: string
@@ -26,12 +28,16 @@ const FilmCard: React.FC<IProps> = ({image, title, url, rating, genres, id}) => 
         dispatch(addCurrentFilm(data))
     }
 
+    const addFilmToFavorites = (data: IFavoritesFilms) => {
+        dispatch(addToFavorites(data))
+    }
+
     return (
             <>
                 {!auth.isAuth ? (
                         <div className={styles.CardFilmBlock} onClick={() => watchFilm({image, title, url, rating, genres, id})}>
                                 <img className={styles.CardFilmImage} src={image} alt="" />
-
+                                <img onClick={() => addFilmToFavorites({image, title, url, rating, genres, id})} className={styles.addToFavorites} src={heart} alt="" />
                         </div>
 
                     )
