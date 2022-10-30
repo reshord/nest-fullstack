@@ -12,9 +12,9 @@ import WatchMovie from './Components/WatchMovie/WatchMovie';
 import Twitch from './Components/Twitch/Twitch';
 import NavbarFooter from './Components/NavbarFooter/NavbarFooter';
 import MenuFilms from './Components/Menu/MenuFilms';
-import SimpleBarReact from 'simplebar-react/dist/simplebar-react';
 import "simplebar/src/simplebar.css";
 import PopularNow from './Components/sidebars/SidebarMenu/CategoriesPages/PopularNow';
+import Error404 from './Components/Error404';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -31,7 +31,7 @@ root.render(
               <Route path='/twitch' element={<Twitch />}/>
               <Route path='/menu' element={<MenuFilms />}/>
               <Route path='/popular-now' element={<PopularNow />}/>
-              
+              <Route path='*' element={<Error404 />}/>
             </Routes>
           </Provider>
           <div className="navbarFooterBlock">

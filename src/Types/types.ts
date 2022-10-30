@@ -26,3 +26,11 @@ export interface IAllFilms {
     id: number
     url: string
 }
+export interface IPopularFilms {
+    image: string
+    title: string
+    genres: string
+    rating: number
+    id: number
+    url: string
+}

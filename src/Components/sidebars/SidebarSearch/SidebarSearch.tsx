@@ -10,17 +10,18 @@ import { addCurrentFilm } from '../../../rtk/slices/films'
 import SimpleBarReact from 'simplebar-react/dist/simplebar-react';
 import "simplebar/src/simplebar.css";
 import SearchedFilm from './SearchedFilm'
+import { getPopularFilms } from '../../../rtk/axios'
 
 const SidebarSearch = () => {
 
     const {films, auth} = useAppSelector<RootState>(store.getState)
 
-    let sortedFilms = [...films.allFilms]
-    sortedFilms = sortedFilms.sort((a, b) => b.rating - a.rating)
-
     const [value, setValue] = useState<string>('')
+    const dispatch = useAppDispatch()
 
-
+    useEffect(() => {
+        dispatch(getPopularFilms())
+    }, []);
 
     const filterFilms = films.allFilms.filter(el => {
         return el.title.toLowerCase().includes(value.toLowerCase())
@@ -44,7 +45,8 @@ const SidebarSearch = () => {
            <div className={styles.recommendFilms}>
                 <span className={styles.title}>Popular Movies</span>
                 <div className={styles.someFilms}>
-                    {sortedFilms.map(el => <CardFilm 
+                    {films.popularFilms.map(el => 
+                                                        <CardFilm 
                                                             title={el.title} 
                                                             image={el.image} 
                                                             genres={el.genres} 

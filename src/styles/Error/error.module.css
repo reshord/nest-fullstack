@@ -1,0 +1,27 @@
+.blockError span {
+    color: white;
+    font-size: 30px;
+    font-weight: 600;    
+}
+
+.mainPageError {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.blockError {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid white;
+    width: 300px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.blockError a {
+    color: white;
+    margin-top: 10px;
+    font-size: 20px;
+}

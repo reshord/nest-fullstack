@@ -1,14 +1,21 @@
 import Slider from "./slider/slider"
 import styles from '../../styles/Content/content.module.css'
 import FilmsSlider from "./slider/FilmsSlider"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import store, { RootState } from "../../rtk/store"
-import { useAppSelector } from "../../rtk/hooks"
+import { useAppDispatch, useAppSelector } from "../../rtk/hooks"
 import AuthModal from "../Modals/SignUpPlease"
+import { getFilms } from "../../rtk/axios"
 
 const Content = () => {
 
     const {modals} = useAppSelector<RootState>(store.getState)
+
+    const dispatch = useAppDispatch()
+
+    useEffect(() => {
+        dispatch(getFilms())
+    }, []);
 
     return (
         <div className={styles.content}>
@@ -19,8 +26,8 @@ const Content = () => {
             <section>
                 <Slider/>
             </section>
-            <FilmsSlider />
-            <FilmsSlider />
+            <FilmsSlider sliderTitle={'Discovery'} />
+            <FilmsSlider sliderTitle={'Fresh movies'}/>
         </div>
     )
 }

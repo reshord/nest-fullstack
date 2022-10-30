@@ -47,7 +47,7 @@ const WatchMovie = () => {
                         <img className={styles.movieImage} src={films.currentFilm?.image} alt="" />
                     </div>
                     <div className={styles.blockInfoDescription}>
-                        <span>Title: {films.currentFilm?.title}</span>
+                        <span> Title: {films.currentFilm?.title}</span>
                         <span>Genres: {films.currentFilm?.genres}</span>
                         <span>Rating: {films.currentFilm?.rating}</span>
                     </div>

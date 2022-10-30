@@ -34,17 +34,13 @@ const FilmCard: React.FC<IProps> = ({image, title, url, rating, genres, id}) => 
 
     return (
             <>
-                {!auth.isAuth ? (
-                        <div className={styles.CardFilmBlock} onClick={() => watchFilm({image, title, url, rating, genres, id})}>
-                                <img className={styles.CardFilmImage} src={image} alt="" />
-                                <img onClick={() => addFilmToFavorites({image, title, url, rating, genres, id})} className={styles.addToFavorites} src={heart} alt="" />
-                        </div>
-
-                    )
-                    : (
-                        <SignUpPlease />
-                    )
-                }
+                {!auth.isAuth && (
+                        <div className={styles.CardFilmBlock}>
+                       <Link className={styles.linkToFilm} to={`/watch/${title}`}>
+                             <img onClick={() => watchFilm({image, title, url, rating, genres, id})} className={styles.CardFilmImage} src={image} alt="" />
+                        </Link>
+                               <img onClick={() => addFilmToFavorites({image, title, url, rating, genres, id})} className={styles.addToFavorites} src={heart} alt="" />
+                        </div>)}
 
             </>
     )
